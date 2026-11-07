@@ -1,0 +1,2 @@
+# SMBResolver uses only Python standard library.
+# No pip install required.

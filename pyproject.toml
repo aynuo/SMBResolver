@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smbresolver"
+version = "1.0.0"
+description = "SMB network scanner, hostname resolver, and remote command executor"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["smbresolver*"]

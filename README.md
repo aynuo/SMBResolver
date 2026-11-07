@@ -8,6 +8,7 @@ A modular Python CLI tool for SMB network scanning, hostname resolution, and ver
 - **Hostname resolution**: NetBIOS Node Status queries with reverse DNS fallback
 - **SMB version detection**: Identifies SMBv1, SMBv2.x, and SMBv3 variants
 - **Signing status**: Reports whether SMB signing is required/enabled/disabled
+- **Progress bar**: Real-time scan progress visualization
 - **Plugin architecture**: Each capability is a separate plugin file — easy to extend
 
 ## Requirements
@@ -65,6 +66,21 @@ python run.py --targets 192.168.1.0/24 --threads 50 --timeout 3
 ```bash
 python run.py --targets 192.168.1.0/24 --output results.json
 python run.py --targets 192.168.1.0/24 --output results.csv
+```
+
+## Example Output
+
+```
+Scanning 5 target(s) with 20 threads...
+------------------------------------------------------------
+[########################################] 100.0% (5/5)
+------------------------------------------------------------
+IP           Hostname           SMB Version  Signing  Status 
+-----------  -----------------  -----------  -------  -------
+192.168.1.1  -                  SMBv2+       enabled  OK
+192.168.1.2  server01.example   SMBv3        required OK
+
+Summary: 5 hosts scanned, 4 reachable, 1 timeouts, 0 errors
 ```
 
 ## Plugin System
