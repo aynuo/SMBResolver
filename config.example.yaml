@@ -1,0 +1,10 @@
+# SMBResolver Configuration (optional)
+# Copy to config.yaml and customize as needed.
+
+scan:
+  threads: 20          # Max concurrent scan workers
+  timeout: 5           # Per-host timeout in seconds
+
+logging:
+  level: info          # debug, info, warning, error
+  file: smbresolver.log
